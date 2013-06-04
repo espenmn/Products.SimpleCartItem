@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+metal:use-macro="here/main_template/macros/master"
+i18n:domain="simplecartitem">
+
+<metal:block metal:fill-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border',1)" />
+
+<body>
+    <div metal:fill-slot="main">
+      <tal:mylistblock tal:define="results here/REQUEST/SESSION/cartList|nothing;"
+                       tal:condition="results">
+        <form method="post"
+              tal:attributes="action here/absolute_url">
+          <table class="listing">
+            <thead>
+              <tr>
+                <th i18n:translate="cart_header_title">Product</th>
+                <th i18n:translate="cart_header_quantity">Quantity</th>
+                <th i18n:translate="cart_header_price">Price</th>
+                <th i18n:translate="cart_header_total">Total</th>
+                <th i18n:translate="cart_header_delete">Delete</th>
+              </tr>
+            </thead>
+            <div tal:repeat="item results">
+              <tr>
+                <td>
+                <span tal:content="item/name"></span>
+                  <tal:options tal:condition="item/options|nothing">-- 
+                     <span tal:content="item/options"></span>
+                  </tal:options>
+                </td>
+                <td>
+                  <input type="text" size="5" title="quantity"
+                         tal:attributes="value item/quantity;
+                                         name string:${item/id},${item/options};
+                                         tabindex tabindex/next" />
+                </td>
+                <td tal:content="python:context.getFormattedPrice(item['price'])">[Price per item]</td>
+                <td tal:content="python:context.getFormattedPrice( float(item['price']) * item['quantity'])">[Price total]</td>
+                <td>
+                  <input type="checkbox" title="Select item"
+                         name="cart_item:list" class="noborder"
+                         i18n:attributes="title label_select_item;"
+                         tal:attributes="value string:${item/id},${item/options}; 
+                                         tabindex tabindex/next" />
+                </td>
+              </tr>
+            </div>
+          </table>
+          <input class="context" type="submit" value="Update"
+                 name="updateCart:method" i18n:attributes="value button_update;"
+                 tal:attributes="tabindex tabindex/next" />
+          
+          <input class="destructive" type="submit" value="Delete"
+                 name="deleteItem:method"
+                 i18n:attributes="value button_delete;"
+                 tal:attributes="tabindex tabindex/next" />
+          
+          <input class="context" type="submit" value="Checkout"
+                 
+                 i18n:attributes="value button_checkout;"
+                 tal:attributes="tabindex tabindex/next;
+								 name  python:context.getGatewayScript()" />
+        </form>
+        
+        <br />
+        
+        <form method="post"
+              tal:attributes="action python:here.REQUEST.SESSION['href']">
+          <input class="context" type="submit"
+                 value="Continue Shopping" name=""
+                 i18n:attributes="value button_continueshopping;" />
+        </form>
+      </tal:mylistblock>
+      
+      <h3 tal:condition="not:here/REQUEST/SESSION/cartList|nothing"
+          i18n:translate="heading_cart_empty">
+         Cart is empty
+      </h3>
+
+    </div>
+  </body>
+</html>

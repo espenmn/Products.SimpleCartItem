@@ -1,0 +1,12 @@
+[default]
+title=SimpleCartItem Setup
+
+[security]
+View = 0:Manager
+
+[validators]
+validators=prefs_simplecartitem_form_validate
+
+[actions]
+action.success=traverse_to:string:prefs_simplecartitem_set
+action.failure=traverse_to:string:prefs_simplecartitem_form

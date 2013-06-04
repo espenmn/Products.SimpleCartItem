@@ -1,0 +1,21 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="simplecartitem">
+<body>
+<div metal:define-macro="portlet"
+        tal:define="results here/REQUEST/SESSION/cartList|nothing;"      
+     tal:condition="results">
+
+<dl class="portlet" id="portlet-cart">
+   
+    <dt class="portletHeader"><span i18n:translate="box_cart">Cart</span></dt>
+    <dd class="portletFooter">
+       <span i18n:translate="text_cartcontent">You have <span i18n:name="count" tal:content="here/cart_size "/> item(s) in your cart</span>
+       <a href="#" tal:attributes="href string:${portal_url}/cart"
+          i18n:translate="box_view_cart">view cart &hellip;</a>
+    </dd>
+</dl>
+
+</div>
+</body>
+</html>

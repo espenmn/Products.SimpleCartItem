@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="Products.SimpleCartItem">
+
+  <include package="plone.app.contentmenu" />
+
+  <browser:menuItem
+    for="..interfaces.ISimpleCartItem"
+    menu="plone_displayviews"
+    title="SimpleCartItem View"
+    action="@@view"
+    description="Default representation of SimpleCartItem"
+    />
+
+  <browser:page
+    for="*"
+    name="view"
+    class=".template.SimpleCartItemView"
+    permission="zope2.View"
+    />
+
+</configure>

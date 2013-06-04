@@ -1,0 +1,270 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleCartItem\n"
+"POT-Creation-Date: 2007-02-03 09:39+0000\n"
+"PO-Revision-Date: 2007-02-03 10:40+0100\n"
+"Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
+"Language-Team: CS <info@corenet.cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: cs\n"
+"Language-Name: Czech\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: simplecartitem\n"
+
+#: skins/simplecartitem/updateCart.py:23
+msgid "Cart updated."
+msgstr "Obsah košíku aktualizován."
+
+#: skins/simplecartitem/prefs_simplecartitem_form_validate.vpy:12
+msgid "Input is required but not given."
+msgstr "Položka je vyžadována."
+
+#: skins/simplecartitem/deleteItem.py:23
+msgid "No items selected."
+msgstr "Nebyly vybrány žádné položky."
+
+#: skins/simplecartitem/prefs_simplecartitem_form_validate.vpy:40
+msgid "Please correct the indicated errors."
+msgstr "Opravte prosím vyznačené chyby."
+
+#: skins/simplecartitem/updateCart.py:26
+msgid "Please enter a number"
+msgstr "Zadejte prosím číslo"
+
+#: skins/simplecartitem/prefs_simplecartitem_set.cpy:24
+msgid "SimpleCartItem settings updated."
+msgstr "Nastavení produktu SimpleCartItem bylo aktualizováno"
+
+#. Default: "add to cart"
+#: skins/simplecartitem/simplecartitem_view.pt
+msgid "add to cart"
+msgstr "Přidat do košíku"
+
+#. Default: "out of stock"
+#: skins/simplecartitem/simplecartitem_view.pt
+msgid "alt_outofstock"
+msgstr "Momentálně vyprodáno"
+
+#. Default: "Cart"
+#: skins/simplecartitem/portlet_cart.pt
+msgid "box_cart"
+msgstr "Košík"
+
+#. Default: "view cart"
+#: skins/simplecartitem/portlet_cart.pt
+msgid "box_view_cart"
+msgstr "Zobrazit košík"
+
+#. Default: "Checkout"
+#: skins/simplecartitem/cart.pt
+msgid "button_checkout"
+msgstr "Dokončit objednávku"
+
+#. Default: "Continue Shopping"
+#: skins/simplecartitem/cart.pt
+msgid "button_continueshopping"
+msgstr "Pokračovat v nákupu"
+
+#. Default: "Delete"
+#: skins/simplecartitem/cart.pt
+msgid "button_delete"
+msgstr "Smazat"
+
+#. Default: "Update"
+#: skins/simplecartitem/cart.pt
+msgid "button_update"
+msgstr "Aktualizovat"
+
+#. Default: "Could not find ${cancel_page}"
+msgid "cancelpage_not_found"
+msgstr "Nepodařilo se najít stránku ${cancel_page}"
+
+#. Default: "Delete"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_delete"
+msgstr "Smazat"
+
+#. Default: "Price"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_price"
+msgstr "Cena"
+
+#. Default: "Quantity"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_quantity"
+msgstr "Množství"
+
+#. Default: "Product"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_title"
+msgstr "Položka"
+
+#. Default: "Total"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_total"
+msgstr "Celkem"
+
+#. Default: "Lets you set payment gateway and return page options."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "description_simplecartitem_setup"
+msgstr "Zde můžete nastavit způsoby platby a další vlastnosti produktu."
+
+#. Default: "Cart is empty"
+#: skins/simplecartitem/cart.pt
+msgid "heading_cart_empty"
+msgstr "Košík je prázdný"
+
+#. Default: "Simple Cart Item Settings"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "heading_simplecartitem_setup"
+msgstr "Nastavení produktu SimpleCartItem"
+
+#. Default: "Change the account id for your payement gateway. Currently only works with PayPal."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_accountid"
+msgstr "Nastavte prosím účet u PayPal, pokud ho znáte."
+
+#. Default: "Set the path to the page that user is directed to if order is cancelled. Use <strong>'/'</strong> for the portal home page, and <strong>'/cancelpage'</strong> to redirect to a page called 'cancelpage'."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_cancelpage"
+msgstr "Zde nastavte cestu ke stránce, na kterou bude uživatel přesměrován v případě, že dojde ke stornování objednávky. Použijete-li <strong>'/'</strong>, bude přesměrován na hlavní stránku portálu, použijete-li <strong>'/stornovano'</strong> bude přesměrován na stránku s ID stornovano v hlavní složce portálu atd."
+
+#. Default: "Choose the currency code for your payment gateway."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_currencycode"
+msgstr "Vyberte kód měny pro položky a pro platební bránu"
+
+#. Default: "Short description of the item; it will show up in listing views."
+#: SimpleCartItem.py
+msgid "help_description"
+msgstr "Krátký popis položky. Tento popis se bude zobrazovat například v přehledném výpisu složky."
+
+#. Default: "Optionally upload a picture of the item"
+#: SimpleCartItem.py
+msgid "help_image"
+msgstr "Můžete nahrát obrázek položky."
+
+#. Default: "If it's not in stock, shoppers can see all the information about it, but can't actually add it to their cart."
+#: SimpleCartItem.py
+msgid "help_instock"
+msgstr "Pokud není položka skladem, mohou si stále návštěvníci prohlížet informace o položce, ale nemohou si ji objednat."
+
+#. Default: "For instance, "Small", "Medium", and "Large", or "Brown", "Black", and "Red".  You may add as many or few options as you like."
+#: SimpleCartItem.py
+msgid "help_options"
+msgstr "Například: \"M\", \"XL\", \"S\", \"XXL\", nebo \"Modrý\", \"Stříbrný\". Můžete vložit libovolný počet položek."
+
+#. Default: "For instance, "Size" or "Colors"."
+#: SimpleCartItem.py
+msgid "help_options_description"
+msgstr "Například \"Velikost\"  nebo \"Barva\""
+
+#. Default: "Price for your item -- do NOT include currency symbols!"
+#: SimpleCartItem.py
+msgid "help_price"
+msgstr "Cena položky. Nezadávejte prosím měnu! Pouze číslo."
+
+#. Default: "Detailed description of the item"
+#: SimpleCartItem.py
+msgid "help_short_description"
+msgstr "Podrobný popis položky."
+
+#. Default: "Set the path to the page that user is directed to after the order is completed. Use <strong>'/'</strong> for the portal home page, and <strong>'/thankyou'</strong> to redirect to a page called 'thankyou'."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_thankyoupage"
+msgstr "Zde nastavte cestu ke stránce, na kterou bude uživatel přesměrován v případě, že úspěšně dokončí objednávku. Použijete-li <strong>'/'</strong>, bude přesměrován na hlavní stránku portálu, použijete-li <strong>'/dekujeme'</strong> bude přesměrován na stránku s ID dekujeme v hlavní složce portálu atd."
+
+#. Default: "Account id"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_accountid"
+msgstr "Identifikátor účtu"
+
+#. Default: "Cancel Page"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_cancelpage"
+msgstr "Storno stránka"
+
+#. Default: "Currency Code"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_currencycode"
+msgstr "Kód měny"
+
+#. Default: "Basic Description"
+#: SimpleCartItem.py
+msgid "label_description"
+msgstr "Základní popis"
+
+#. Default: "Image"
+#: SimpleCartItem.py
+msgid "label_image"
+msgstr "Obrázek"
+
+#. Default: "Is this item in stock?"
+#: SimpleCartItem.py
+msgid "label_instock"
+msgstr "Položka skladem?"
+
+#. Default: "Options"
+#: SimpleCartItem.py
+msgid "label_options"
+msgstr "Možnosti"
+
+#. Default: "Options Label"
+#: SimpleCartItem.py
+msgid "label_options_description"
+msgstr "Nadpis pro možnosti položky"
+
+#. Default: "Price"
+#: SimpleCartItem.py
+msgid "label_price"
+msgstr "Cena"
+
+#. Default: "Save"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_save"
+msgstr "Uložit"
+
+#. Default: "Select item"
+#: skins/simplecartitem/cart.pt
+msgid "label_select_item"
+msgstr "Vyberte položku"
+
+#. Default: "Extended Description"
+#: SimpleCartItem.py
+msgid "label_short_description"
+msgstr "Rozšířený popis"
+
+#. Default: "Thank You page"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_thankyoupage"
+msgstr "Stránka s poděkováním"
+
+#. Default: "Your Price:"
+#: skins/simplecartitem/simplecartitem_view.pt
+msgid "label_yourprice"
+msgstr "Vaše cena:"
+
+#. Default: "SimpleCartItem details"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "legend_simplecartitem_details"
+msgstr "Detaily položky"
+
+#: skins/simplecartitem/prefs_simplecartitem_form_validate.vpy:36
+msgid "simplecartitem"
+msgstr "simplecartitem"
+
+#. Default: "You have ${count} item(s) in your cart"
+#: skins/simplecartitem/portlet_cart.pt
+msgid "text_cartcontent"
+msgstr "Položek v košíku: ${count}"
+
+#. Default: "Could not find ${thankyou_page}"
+msgid "thankyoupage_not_found"
+msgstr "Nepodařilo se najít stránku ${thankyou_page}"
+

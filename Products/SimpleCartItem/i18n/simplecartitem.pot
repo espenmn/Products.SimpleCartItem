@@ -1,0 +1,272 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleCartItem\n"
+"POT-Creation-Date: 2007-02-03 09:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: simplecartitem\n"
+
+#: skins/simplecartitem/updateCart.py:23
+msgid "Cart updated."
+msgstr ""
+
+#: skins/simplecartitem/prefs_simplecartitem_form_validate.vpy:12
+msgid "Input is required but not given."
+msgstr ""
+
+#: skins/simplecartitem/deleteItem.py:23
+msgid "No items selected."
+msgstr ""
+
+#: skins/simplecartitem/prefs_simplecartitem_form_validate.vpy:40
+msgid "Please correct the indicated errors."
+msgstr ""
+
+#: skins/simplecartitem/updateCart.py:26
+msgid "Please enter a number"
+msgstr ""
+
+#: skins/simplecartitem/prefs_simplecartitem_set.cpy:24
+msgid "SimpleCartItem settings updated."
+msgstr ""
+
+#. Default: "add to cart"
+#: skins/simplecartitem/simplecartitem_view.pt
+msgid "add to cart"
+msgstr ""
+
+#. Default: "out of stock"
+#: skins/simplecartitem/simplecartitem_view.pt
+msgid "alt_outofstock"
+msgstr ""
+
+#. Default: "Cart"
+#: skins/simplecartitem/portlet_cart.pt
+msgid "box_cart"
+msgstr ""
+
+#. Default: "view cart"
+#: skins/simplecartitem/portlet_cart.pt
+msgid "box_view_cart"
+msgstr ""
+
+#. Default: "Checkout"
+#: skins/simplecartitem/cart.pt
+msgid "button_checkout"
+msgstr ""
+
+#. Default: "Continue Shopping"
+#: skins/simplecartitem/cart.pt
+msgid "button_continueshopping"
+msgstr ""
+
+#. Default: "Delete"
+#: skins/simplecartitem/cart.pt
+msgid "button_delete"
+msgstr ""
+
+#. Default: "Update"
+#: skins/simplecartitem/cart.pt
+msgid "button_update"
+msgstr ""
+
+#. Default: "Could not find ${cancel_page}"
+#: 
+msgid "cancelpage_not_found"
+msgstr ""
+
+#. Default: "Delete"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_delete"
+msgstr ""
+
+#. Default: "Price"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_price"
+msgstr ""
+
+#. Default: "Quantity"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_quantity"
+msgstr ""
+
+#. Default: "Product"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_title"
+msgstr ""
+
+#. Default: "Total"
+#: skins/simplecartitem/cart.pt
+msgid "cart_header_total"
+msgstr ""
+
+#. Default: "Lets you set payment gateway and return page options."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "description_simplecartitem_setup"
+msgstr ""
+
+#. Default: "Cart is empty"
+#: skins/simplecartitem/cart.pt
+msgid "heading_cart_empty"
+msgstr ""
+
+#. Default: "Simple Cart Item Settings"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "heading_simplecartitem_setup"
+msgstr ""
+
+#. Default: "Change the account id for your payement gateway. Currently only works with PayPal."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_accountid"
+msgstr ""
+
+#. Default: "Set the path to the page that user is directed to if order is cancelled. Use <strong>'/'</strong> for the portal home page, and <strong>'/cancelpage'</strong> to redirect to a page called 'cancelpage'."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_cancelpage"
+msgstr ""
+
+#. Default: "Choose the currency code for your payment gateway."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_currencycode"
+msgstr ""
+
+#. Default: "Short description of the item; it will show up in listing views."
+#: SimpleCartItem.py
+msgid "help_description"
+msgstr ""
+
+#. Default: "Optionally upload a picture of the item"
+#: SimpleCartItem.py
+msgid "help_image"
+msgstr ""
+
+#. Default: "If it's not in stock, shoppers can see all the information about it, but can't actually add it to their cart."
+#: SimpleCartItem.py
+msgid "help_instock"
+msgstr ""
+
+#. Default: "For instance, "Small", "Medium", and "Large", or "Brown", "Black", and "Red".  You may add as many or few options as you like."
+#: SimpleCartItem.py
+msgid "help_options"
+msgstr ""
+
+#. Default: "For instance, "Size" or "Colors"."
+#: SimpleCartItem.py
+msgid "help_options_description"
+msgstr ""
+
+#. Default: "Price for your item -- do NOT include currency symbols!"
+#: SimpleCartItem.py
+msgid "help_price"
+msgstr ""
+
+#. Default: "Detailed description of the item"
+#: SimpleCartItem.py
+msgid "help_short_description"
+msgstr ""
+
+#. Default: "Set the path to the page that user is directed to after the order is completed. Use <strong>'/'</strong> for the portal home page, and <strong>'/thankyou'</strong> to redirect to a page called 'thankyou'."
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "help_thankyoupage"
+msgstr ""
+
+#. Default: "Account id"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_accountid"
+msgstr ""
+
+#. Default: "Cancel Page"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_cancelpage"
+msgstr ""
+
+#. Default: "Currency Code"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_currencycode"
+msgstr ""
+
+#. Default: "Basic Description"
+#: SimpleCartItem.py
+msgid "label_description"
+msgstr ""
+
+#. Default: "Image"
+#: SimpleCartItem.py
+msgid "label_image"
+msgstr ""
+
+#. Default: "Is this item in stock?"
+#: SimpleCartItem.py
+msgid "label_instock"
+msgstr ""
+
+#. Default: "Options"
+#: SimpleCartItem.py
+msgid "label_options"
+msgstr ""
+
+#. Default: "Options Label"
+#: SimpleCartItem.py
+msgid "label_options_description"
+msgstr ""
+
+#. Default: "Price"
+#: SimpleCartItem.py
+msgid "label_price"
+msgstr ""
+
+#. Default: "Save"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_save"
+msgstr ""
+
+#. Default: "Select item"
+#: skins/simplecartitem/cart.pt
+msgid "label_select_item"
+msgstr ""
+
+#. Default: "Extended Description"
+#: SimpleCartItem.py
+msgid "label_short_description"
+msgstr ""
+
+#. Default: "Thank You page"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "label_thankyoupage"
+msgstr ""
+
+#. Default: "Your Price:"
+#: skins/simplecartitem/simplecartitem_view.pt
+msgid "label_yourprice"
+msgstr ""
+
+#. Default: "SimpleCartItem details"
+#: skins/simplecartitem/prefs_simplecartitem_form.cpt
+msgid "legend_simplecartitem_details"
+msgstr ""
+
+#: skins/simplecartitem/prefs_simplecartitem_form_validate.vpy:36
+msgid "simplecartitem"
+msgstr ""
+
+#. Default: "You have ${count} item(s) in your cart"
+#: skins/simplecartitem/portlet_cart.pt
+msgid "text_cartcontent"
+msgstr ""
+
+#. Default: "Could not find ${thankyou_page}"
+#: 
+msgid "thankyoupage_not_found"
+msgstr ""
+

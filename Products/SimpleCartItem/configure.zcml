@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="Products.SimpleCartItem">
+    
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <include package="Products.CMFCore" />
+  <include package="Products.DataGridField" />
+
+  <!-- Include the sub-packages that use their own configure.zcml files. -->
+  <include package=".browser" />
+  <include package=".content" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Simple Cart Item"
+      directory="profiles/default"
+      description="SimpleCartItem Content Type"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+ 
+
+    <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
+
+
+</configure>

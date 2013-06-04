@@ -1,0 +1,172 @@
+Initial imports, defines and setups.
+------------------------------------
+    >>> from Products.Archetypes.Schema.factory import instanceSchemaFactory
+    >>> from zope.component import provideAdapter
+    >>> provideAdapter(instanceSchemaFactory)
+
+SimpleCartItem
+--------------
+    >>> from Products.SimpleCartItem.content import SimpleCartItem
+    >>> item = SimpleCartItem('item')
+    >>> item
+     <SimpleCartItem at item>
+    >>> item.portal_type
+    'SimpleCartItem'
+    >>> from Products.SimpleCartItem.interfaces import ISimpleCartItem
+    >>> ISimpleCartItem.providedBy(item)
+    True
+    >>> item.schema
+    <Products.Archetypes.Schema.Schema object at ...>
+    >>> names = [field.getName() for field in item.schema.getSchemataFields('default')]
+    >>> names
+    ['id', 'title', 'description', 'price', 'short_description', 'options_description', 'options', 'image', 'instock']
+
+Field: id
+----
+    >>> item.schema['id']
+    <Field id(string:rw)>
+    >>> item.schema['id'].required == False
+    True
+    >>> item.schema['id'].searchable == False
+    True
+    >>> item.schema['id'].languageIndependent
+    False
+    >>> item.schema['id'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['id'].widget
+    <Products.Archetypes.Widget.IdWidget object at ...>
+    >>> item.schema['id'].widget.label
+    u'label_short_name'
+    >>> item.schema['id'].widget.description
+    u'help_shortname'
+    >>> item.id = 3
+    >>> item.getId()
+    3
+
+Field: description
+----
+    >>> item.schema['description']
+    <Field description(text:rw)>
+    >>> item.schema['description'].required == False
+    True
+    >>> item.schema['description'].searchable == True
+    True
+    >>> item.schema['description'].languageIndependent
+    False
+    >>> item.schema['description'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['description'].widget
+    <Products.Archetypes.Widget.TextAreaWidget object at ...>
+    >>> item.schema['description'].widget.label
+    'Basic Description'
+    >>> item.schema['description'].widget.description
+    'Short description of the item; it will show up in listing views.'
+
+Field: price
+----
+    >>> item.schema['price']
+    <Field price(float:rw)>
+    >>> item.schema['price'].required == False
+    True
+    >>> item.schema['price'].searchable == False
+    True
+    >>> item.schema['price'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['price'].widget
+    <Products.Archetypes.Widget.DecimalWidget object at ...>
+    >>> item.schema['price'].widget.label
+    'Price'
+    >>> item.schema['price'].widget.description
+    'Price for your item -- do NOT include currency symbols!'
+    >>> item.price = 10.0
+    >>> item.getPrice()
+    10.0
+
+Field: short_description
+----
+    >>> item.schema['short_description']
+    <Field short_description(text:rw)>
+    >>> item.schema['short_description'].required == False
+    True
+    >>> item.schema['short_description'].searchable == True
+    True
+    >>> item.schema['short_description'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['short_description'].widget
+    <Products.Archetypes.Widget.RichWidget object at ...>
+    >>> item.schema['short_description'].widget.label
+    'Extended Description'
+    >>> item.schema['short_description'].widget.description
+    'Detailed description of the item.'
+
+Field: options_description
+----
+    >>> item.schema['options_description']
+    <Field options_description(string:rw)>
+    >>> item.schema['options_description'].required == False
+    True
+    >>> item.schema['options_description'].searchable == True
+    True
+    >>> item.schema['options_description'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['options_description'].widget
+    <Products.Archetypes.Widget.StringWidget object at ...>
+    >>> item.schema['options_description'].widget.label
+    'Options Label'
+    >>> item.schema['options_description'].widget.description
+    'For instance, Size or Colors.'
+
+Field: options
+----
+    >>> item.schema['options']
+    <Field options(datagrid:rw)>
+    >>> item.schema['options'].required == False
+    True
+    >>> item.schema['options'].searchable == True
+    True
+    >>> item.schema['options'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['options'].widget
+    <Products.DataGridField.DataGridWidget.DataGridWidget object at ...>
+    >>> item.schema['options'].widget.label
+    'Options'
+    >>> item.schema['options'].widget.description
+    'For instance, "Small", "Medium", and "Large", or "Brown", "Black", and "Red".  You may add as many or few options as you like.'
+
+    >>> item.options = '1'
+    >>> item.getOptions()
+    ('1',)
+
+Field: image
+----
+    >>> item.schema['image']
+    <Field image(image:rw)>
+    >>> item.schema['image'].required == False
+    True
+    >>> item.schema['image'].searchable == False
+    True
+    >>> item.schema['image'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['image'].widget
+    <Products.Archetypes.Widget.ImageWidget object at ...>
+    >>> item.schema['image'].widget.label
+    'Image'
+    >>> item.schema['image'].widget.description
+    'Optionally upload a picture of the item'
+
+Field: instock
+----
+    >>> item.schema['instock']
+    <Field instock(boolean:rw)>
+    >>> item.schema['instock'].required == False
+    True
+    >>> item.schema['instock'].searchable == False
+    True
+    >>> item.schema['instock'].storage
+    <Storage AttributeStorage>
+    >>> item.schema['instock'].widget
+    <Products.Archetypes.Widget.BooleanWidget object at ...>
+    >>> item.schema['instock'].widget.label
+    'Is this item in stock?'
+    >>> item.schema['instock'].widget.description
+    'If it is not in stock, shoppers can see all the information about it, but cannot actually add it to their cart.'

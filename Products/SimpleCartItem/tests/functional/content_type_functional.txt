@@ -1,0 +1,61 @@
+Initial imports and defines.
+----
+    >>> from Products.CMFCore.utils import getToolByName
+    >>> portal_url =  portal.absolute_url()
+    >>> import StringIO
+    >>> dummy_image = StringIO.StringIO('Dummy image')
+
+Setting up.
+----
+    >>> from Products.Five.testbrowser import Browser
+    >>> browser = Browser()
+
+For debugging.
+----
+    >>> browser.handleErrors = True
+    >>> portal.error_log._ignored_exceptions = ()
+
+Turn off portlets.
+----
+    >>> from zope.component import getUtility, getMultiAdapter
+    >>> from plone.portlets.interfaces import IPortletManager
+    >>> from plone.portlets.interfaces import IPortletAssignmentMapping
+
+    >>> left_column = getUtility(IPortletManager, name=u"plone.leftcolumn")
+    >>> left_assignable = getMultiAdapter((portal, left_column), IPortletAssignmentMapping)
+    >>> for name in left_assignable.keys():
+    ...     del left_assignable[name]
+
+    >>> right_column = getUtility(IPortletManager, name=u"plone.rightcolumn")
+    >>> right_assignable = getMultiAdapter((portal, right_column), IPortletAssignmentMapping)
+    >>> for name in right_assignable.keys():
+    ...     del right_assignable[name]
+
+Log in as the portal owner.
+----
+    >>> browser.open(portal_url)
+    >>> from Products.PloneTestCase.setup import portal_owner, default_password
+    >>> browser.open(portal_url + '/login_form?came_from=' + portal_url)
+    >>> browser.getControl(name='__ac_name').value = portal_owner
+    >>> browser.getControl(name='__ac_password').value = default_password
+    >>> browser.getControl(name='submit').click()
+
+
+Verify that we have the links to simplecartitem from the add item menu:
+----
+    >>> browser.getLink(id='simplecartitem').url.endswith("createObject?type_name=SimpleCartItem")
+    True
+
+Add SimpleCartItem.
+----
+    >>> browser.getLink(id='simplecartitem').click()
+    >>> browser.getControl(name='title').value = "Product01"
+    >>> browser.getControl(name="description").value = 'Description of Product01'
+    >>> browser.getControl(name="price").value = '10.00'
+    >>> browser.getControl(name="short_description").value = '<p>Short of Product01</p>'
+    >>> browser.getControl(name="form.button.save").click()
+
+    >>> 'Product01' in browser.contents
+    True
+    >>> 'Short of Product01' in browser.contents
+    True

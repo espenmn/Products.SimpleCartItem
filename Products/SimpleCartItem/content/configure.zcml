@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="Products.SimpleCartItem">
+
+  <class class=".SimpleCartItem.SimpleCartItem">
+    <require
+        permission="cmf.ModifyPortalContent"
+        interface="..interfaces.ISimpleCartItem"
+        />
+  </class>
+
+</configure>

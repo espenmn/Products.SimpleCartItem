@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="Products.SimpleCartItem">
+  <body>
+  
+    
+    
+    <div metal:fill-slot="content-core">
+      <div metal:define-macro="main">          
+       
+        <tal:simpleitem tal:define="standard modules/Products/PythonScripts/standard">
+          <div align="right">
+            <img src="" alt="out of stock"
+                 tal:condition="not:here/getInstock"
+                 i18n:attributes="alt alt_outofstock;"
+                 tal:attributes="src string:${portal_url}/outofstock_button.gif" />
+          </div>
+          <h1>
+              <span tal:content="here/title_or_id" />
+          </h1>
+          <div tal:content="structure python:here.getImage()" />
+          <br />
+          <p>
+              <strong i18n:translate="label_yourprice">Your Price:</strong>
+              <span tal:content="python:context.getPrice()" />
+          </p>
+          <span tal:content="structure python: here.getShort_description(mimetype='text/html')">
+              Item description
+          </span>
+          <form tal:attributes="action here/id">
+              <tal:hasoptions tal:condition="here/getOptions">
+                <p>
+                  <strong tal:content="here/getOptions_description">
+                    options for this item
+                  </strong>
+                </p>
+                <select tal:define="accessor python:here.getOptions()"
+                        name="options">
+                    <option tal:repeat="item accessor"
+                            tal:content="python: '%s %s' %(item['option'], here.formatPriceAdjustment(item['price_adjustment']))"
+                            tal:attributes="value item/option">
+                        Red    
+                    </option>
+                </select>
+              </tal:hasoptions>
+            <br clear="all" />
+            <input type="image"
+                   tal:attributes="src string:${portal_url}/sc-but-03.gif"
+                   tal:condition="here/getInstock" border="0"
+                   i18n:attributes="alt alt_addtocart"
+                   name="addtoCart:method" alt="add to cart" />
+          </form>
+        </tal:simpleitem>
+      </div>
+    </div>
+    
+    
+    
+  </body>
+</html>

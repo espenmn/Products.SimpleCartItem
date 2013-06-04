@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+
+  <object name="simplecartitem_properties" meta_type="Plone Property Sheet">
+    <property name="title">Simple Cart Item Properties</property>
+    <property name="account_id" type="string">youremail@yourpaymentgateway.com</property>
+    <property name="currency" type="string">USD</property>
+    <property name="cancel_page" type="string">/</property>
+    <property name="thankyou_page" type="string">/</property>
+  </object>
+
+
+</object>
